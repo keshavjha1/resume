@@ -1,14 +1,14 @@
 {
   "main": {
     "name": "Keshav Jha",
-    "description": "I am a Enterprise Software development engineer and I use JavaScript and Java  to develop enterprise ready application. This project is a resume template that can be used as the project home page or resume page",
-    "image": "profilepic.jpg",
-    "bio": "Use this bio section as your way of describing yourself and saying what you do, what technologies you like to use or feel most comfortable with, describing your personality, or whatever else you feel like throwing in.",
+    "description": "I am a Enterprise Software development engineer and I use JavaScript and Java  to develop enterprise ready application.",
+    "image": "keshav.jpeg",
+    "bio": "As a Full stack Developer, I work on every phase of software development. User experience has become the center of major B2C/B2B applications, I work in a cross functional team to accomplish it. In the case of B2B application availability, resilience and securities have become flashpoints, I work on new technology to provide best possible ways to serve B2B software development. Sailing through teams and time, I learn every important aspect of software business, starting from defining its need and corresponding validation. I implement POCs to check feasibility of business problems, estimating effort. I enjoy working in teams with different kinds of projects and technology.",
     "contactmessage": "Here is where you should write your message to readers to have them get in contact with you.",
     "email": "KeshavJha68@gmail.com",
     "phone": "+91 8668511324",
     "github": "https://github.com/keshavjha1",
-    "project": "https://github.com/keshavjha1",
+    "project": "https://github.com/keshavjha1", 
     "address": {
       "street": "W3-15 AWHO Tucker Vihar",
       "city": "Pune",
@@ -46,10 +46,10 @@
     ]
   },
   "resume": {
-    "skillmessage": "Here you can create a short write-up of your skills to show off to employers",
+    "skillmessage": "Primary & Secondary Skills",
     "education": [
       {
-        "school": "KITS Ramtek, RTMNU Nagpur?",
+        "school": "KITS Ramtek, RTMNU Nagpur",
         "degree": "Bachelor of Computer Tech",
         "graduated": "June 2012",
         "description": "4 Year Degree course time kind of wholistic learning experince. It cover alot of computer fundamental course like DAA(Data Structure & Algo Analysis), Computer network, C & C++"
@@ -66,29 +66,29 @@
         "company": "BNY Mellon Technology India",
         "title": "Tech Lead App Dev",
         "years": "March 2017 - February 2018",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "description": "At Bank most of time I worked on internal tools to enable swift payment for internal and external client. I work on resuable angular component & how to manager internal npm registry"
       },
       {
         "company": "Accenture Pvt Ltd",
         "title": "Senior Software Engineer",
         "years": "March 2017 - February 2018",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "description": "Worked across banking client, Omnichannel banking solution & REST enabled Risk & reporting solution for B2B solutions"
       },
       {
         "company": "iGate ( Acquire By Capgemini)",
         "title": "Senior Software Engineer",
         "years": "March 2017 - February 2018",
-        "description": "Describe work, special projects, notable achievements, what technologies you have been working with, and anything else that would be useful for an employer to know."
+        "description": "Worked with European Telecom provider to provide Enterprise solution for Phone Number lifecycle management by Agents or Onboarding B2C Vendors & Worked on Billing Application  ."
       }
     ],
     "skills": [
       {
         "name": "Java",
-        "level": "70%"
+        "level": "75%"
       },
       {
         "name": "Spring MVC, REST, DATA",
-        "level": "70%"
+        "level": "75%"
       },
       {
         "name": "Spring Security",
@@ -107,7 +107,7 @@
         "level": "70%"
       },
       {
-        "name": "Cloud Native( Docker, Kubernetes)",
+        "name": "Cloud Native( Docker, Kubernetes) ",
         "level": "70%"
       },
       {
@@ -119,10 +119,10 @@
   "portfolio": {
     "projects": [
       {
-        "title": "Canadian Wanderlust",
-        "category": "My Travel Blog for my post-university travels",
+        "title": "WIP",
+        "category": "Work in Progress",
         "image": "01.jpg",
-        "url": "https://www.canadianwanderlust.com"
+        "url": "https://keshavjha.net"
       }
     ]
   }

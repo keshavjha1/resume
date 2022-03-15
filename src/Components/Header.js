@@ -13,7 +13,7 @@ class Header extends Component {
 
     return (
       <header id="home">
-        <ParticlesBg type="circle" bg={true} />
+        <ParticlesBg type="polygon" bg={true} />
 
         <nav id="nav-wrap">
           <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -28,7 +28,7 @@ class Header extends Component {
               <a className="smoothscroll" href="#home">
                 Home
               </a>
-            </li>
+            </li> 
 
             <li>
               <a className="smoothscroll" href="#about">
@@ -45,12 +45,6 @@ class Header extends Component {
             <li>
               <a className="smoothscroll" href="#portfolio">
                 Works
-              </a>
-            </li>
-
-            <li>
-              <a className="smoothscroll" href="#contact">
-                Contact
               </a>
             </li>
           </ul>
