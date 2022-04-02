@@ -1,20 +1,43 @@
 import React, { Component } from "react";
-import Zmage from "react-zmage";
 import Fade from "react-reveal";
+import $ from "jquery";
 
 let id = 0;
 class Portfolio extends Component {
+  constructor(props){
+    console.log("s")
+    super(props);
+    this.state = {
+      blog: []
+    };
+  }
+  componentDidMount(){
+    $.ajax({
+      url: "./blog.json",
+      dataType: "json",
+      cache: false,
+      success: function(data) {
+        console.log("datae"+ data.articles)
+        this.setState({ blog: data.articles });
+      }.bind(this),
+      error: function(xhr, status, err) {
+        console.log(err);
+        alert(err);
+      }
+    });
+  }
   render() {
-    if (!this.props.data) return null;
+    if (!this.state.blog) return null;
+   
+   const projects = this.state.blog.map(function (articles) {
+//    let projectImage = "images/portfolio/" + projects.image;
 
-    const projects = this.props.data.projects.map(function (projects) {
-      let projectImage = "images/portfolio/" + projects.image;
-
+     
       return (
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap">
-            <Zmage alt={projects.title} src={projectImage} />
-            <div style={{ textAlign: "center" }}>{projects.title}</div>
+        
+            <div style={{ textAlign: "center" }}>{articles.content}</div>
           </div>
         </div>
       );

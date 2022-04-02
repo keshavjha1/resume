@@ -17,7 +17,7 @@ class App extends Component {
       resumeData: {}
     };
 
-    ReactGA.initialize("UA-110570651-1");
+    ReactGA.initialize("G-1ZRH7R35FL");
     ReactGA.pageview(window.location.pathname);
   }
 

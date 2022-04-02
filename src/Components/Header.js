@@ -4,7 +4,7 @@ import Fade from "react-reveal";
 
 class Header extends Component {
   render() {
-    if (!this.props.data) return null;
+    if (!this.props.data) return null;   
 
     const project = this.props.data.project;
     const github = this.props.data.github;
@@ -49,9 +49,11 @@ class Header extends Component {
             </li>
           </ul>
         </nav>
-
+       
+        
         <div className="row banner">
           <div className="banner-text">
+            <hr/>
             <Fade bottom>
               <h1 className="responsive-headline">{name}</h1>
             </Fade>
@@ -70,8 +72,11 @@ class Header extends Component {
               </ul>
             </Fade>
           </div>
+          
         </div>
-
+        
+      
+        
         <p className="scrolldown">
           <a className="smoothscroll" href="#about">
             <i className="icon-down-circle"></i>

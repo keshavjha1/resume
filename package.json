@@ -1,5 +1,5 @@
 {
-  "name": "reactniceresume",
+  "name": "keshavjha",
   "version": "0.1.0",
   "private": true,
   "homepage": "./",
@@ -13,6 +13,7 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-ga": "^3.3.0",
+    "react-player": "^2.9.0",
     "react-reveal": "^1.2.2",
     "react-scripts": "4.0.3",
     "react-zmage": "^0.8.5-beta.36",
