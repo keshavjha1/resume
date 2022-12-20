@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Fade from "react-reveal";
 import $ from "jquery";
 
+
 let id = 0;
 class Portfolio extends Component {
   constructor(props){
@@ -26,30 +27,39 @@ class Portfolio extends Component {
       }
     });
   }
+  takeMetoPost= (id )=>{console.log('ss'+ id)}
+ 
+  handleClick = () => {
+    console.log('this is:', this);
+  }
+  
   render() {
+   
     if (!this.state.blog) return null;
    
    const projects = this.state.blog.map(function (articles) {
 //    let projectImage = "images/portfolio/" + projects.image;
-
      
       return (
+        
         <div key={id++} className="columns portfolio-item">
           <div className="item-wrap">
         
-            <div style={{ textAlign: "center" }}>{articles.content}</div>
+            <div style={{ textAlign: "center" }} onClick={()=> window.location.href='/post/'+articles.id}>
+              
+              {articles.content}</div>
           </div>
         </div>
       );
     });
 
     return (
-      <section id="portfolio">
+      <div>
         <Fade left duration={1000} distance="40px">
           <div className="row">
             <div className="twelve columns collapsed">
               <h1>Check Out Some of My Works.</h1>
-
+      
               <div
                 id="portfolio-wrapper"
                 className="bgrid-quarters s-bgrid-thirds cf"
@@ -59,7 +69,7 @@ class Portfolio extends Component {
             </div>
           </div>
         </Fade>
-      </section>
+      </div>
     );
   }
 }

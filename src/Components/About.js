@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Fade from "react-reveal";
+import style from "./about.css"
 
 class About extends Component {
+
   render() {
     if (!this.props.data) return null;
 
@@ -17,8 +19,8 @@ class About extends Component {
     const resumeDownload = this.props.data.resumedownload;
 
     return (
-      <section id="about">
-        <Fade duration={1000}>
+    <div id="about">
+
           <div className="row">
             <div className="three columns">
               <img
@@ -58,8 +60,8 @@ class About extends Component {
               </div>
             </div>
           </div>
-        </Fade>
-      </section>
+
+    </div>
     );
   }
 }

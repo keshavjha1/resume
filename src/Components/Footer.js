@@ -3,8 +3,8 @@ import Fade from "react-reveal";
 
 class Footer extends Component {
   render() {
-    if (!this.props.data) return null;
-
+/*    if (!this.props.data) return null;
+ 
     const networks = this.props.data.social.map(function (network) {
       return (
         <li key={network.name}>
@@ -13,14 +13,14 @@ class Footer extends Component {
           </a>
         </li>
       );
-    });
+    }); */
 
     return (
       <footer>
         <div className="row">
           <Fade bottom>
             <div className="twelve columns">
-              <ul className="social-links">{networks}</ul>
+              {/* <ul className="social-links">{networks}</ul> */}
 
               <ul className="copyright">
                 <li>&copy; Copyright 2022 Keshav Jha</li>

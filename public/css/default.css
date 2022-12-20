@@ -87,6 +87,14 @@ pre {
    word-wrap: break-word;
 }
 
+.divMain{
+    margin: 100px;
+    display: flex;
+    align-content: stretch;
+    justify-content: space-evenly;
+    align-items: baseline;
+    flex-direction: column;
+}
 blockquote, q { quotes: &#8220 &#8220; }
 
 blockquote:before, blockquote:after,

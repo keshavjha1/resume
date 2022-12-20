@@ -1,13 +1,15 @@
 import React, { Component } from "react";
 import ReactGA from "react-ga";
-import $ from "jquery";
 import "./App.css";
-import Header from "./Components/Header";
+import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
 // import Contact from "./Components/Contact";
 import Portfolio from "./Components/Portfolio";
+import ParticlesBg from "particles-bg";
+import Header from "./Components/header";
+import {BrowserRouter, Route, Outlet, Routes} from "react-router-dom";
 
 class App extends Component {
   constructor(props) {
@@ -22,18 +24,11 @@ class App extends Component {
   }
 
   getResumeData() {
-    $.ajax({
-      url: "./resumeData.json",
-      dataType: "json",
-      cache: false,
-      success: function(data) {
-        this.setState({ resumeData: data });
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.log(err);
-        alert(err);
-      }
-    });
+    fetch("./resumeData.json").then(response=> response.json())
+      .then(json=>  {
+        console.log(json)
+         this.setState({ resumeData: json }) 
+    })
   }
 
   componentDidMount() {
@@ -42,16 +37,34 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        <Header data={this.state.resumeData.main} />
-        <About data={this.state.resumeData.main} />
-        <Resume data={this.state.resumeData.resume} />
-        <Portfolio data={this.state.resumeData.portfolio} />
+      <div >
+
+
+          <BrowserRouter>
+
+              <Routes>
+                <Route element={<Header/>}>
+                  <Route path="/" element={ <Home data={this.state.resumeData.main} />}></Route>
+
+                  <Route path="/home" element={ <Home data={this.state.resumeData.main} />}></Route>
+
+                  <Route path="/resume" element={  <Resume data={this.state.resumeData.resume} />}></Route>
+
+                  <Route path="/portfolio" element={ <Portfolio data={this.state.resumeData.portfolio} />}></Route>
+                  <Route path="/about" element={<About data={this.state.resumeData.main} />}></Route>
+                </Route>
+              </Routes>
+
+          </BrowserRouter>
+
+
+
      {/*    <Contact data={this.state.resumeData.main} /> */}
         <Footer data={this.state.resumeData.main} />
       </div>
     );
   }
 }
+
 
 export default App;
