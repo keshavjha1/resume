@@ -1,13 +1,14 @@
 import React from 'react'
 import {Link, Outlet} from "react-router-dom";
+import styles from './header.css'
 import style from './about.css'
 import ParticlesBg from "particles-bg";
-import {AppBar, GlobalStyles, CssBaseline, Toolbar, IconButton, Typography, Button, Box} from "@mui/material";
+import {AppBar, Toolbar, IconButton, Typography, Button, Box} from "@mui/material";
 
 const Header =()=>{
 return(
     <div>
-        <AppBar position="static">
+{/*        <AppBar position="static">
                <Toolbar>
                    <IconButton
                        size="large"
@@ -22,7 +23,7 @@ return(
                    </Typography>
                    <Button color="inherit">Login</Button>
                </Toolbar>
-           </AppBar>
+           </AppBar>*/}
 
 
 
@@ -58,7 +59,7 @@ return(
                 </li>
             </ul>
         </nav>
-        <div className="divMain">
+        <div id="divMain">
         <Outlet/>
         </div>
     </div>

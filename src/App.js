@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import ReactGA from "react-ga";
-import "./App.css";
+import styles from "./App.css";
 import Home from "./Components/Home";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
@@ -37,28 +37,16 @@ class App extends Component {
 
   render() {
     return (
-      <div >
-
-
-          <BrowserRouter>
-
+        <div  id="backgroud">
               <Routes>
                 <Route element={<Header/>}>
                   <Route path="/" element={ <Home data={this.state.resumeData.main} />}></Route>
-
                   <Route path="/home" element={ <Home data={this.state.resumeData.main} />}></Route>
-
                   <Route path="/resume" element={  <Resume data={this.state.resumeData.resume} />}></Route>
-
                   <Route path="/portfolio" element={ <Portfolio data={this.state.resumeData.portfolio} />}></Route>
                   <Route path="/about" element={<About data={this.state.resumeData.main} />}></Route>
                 </Route>
               </Routes>
-
-          </BrowserRouter>
-
-
-
      {/*    <Contact data={this.state.resumeData.main} /> */}
         <Footer data={this.state.resumeData.main} />
       </div>

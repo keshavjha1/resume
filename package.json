@@ -48,6 +48,7 @@
     ]
   },
   "devDependencies": {
-    "chokidar": "^3.5.3"
+    "chokidar": "^3.5.3",
+    "css-loader": "^6.7.3"
   }
 }

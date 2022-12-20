@@ -1,0 +1,12 @@
+#backgroud{
+    align-items: flex-start;
+    background-color: cornflowerblue;
+    display: flex;
+    flex-direction: column;
+    left: 0px;
+    margin: 0px;
+    overflow-x: hidden;
+    position: relative;
+    top: 0px;
+    width: 100%;
+}
