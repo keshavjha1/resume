@@ -37,7 +37,8 @@ class App extends Component {
 
   render() {
     return (
-        <div  id="backgroud">
+        <div  className="background">
+        <div >
               <Routes>
                 <Route element={<Header/>}>
                   <Route path="/" element={ <Home data={this.state.resumeData.main} />}></Route>
@@ -50,6 +51,7 @@ class App extends Component {
      {/*    <Contact data={this.state.resumeData.main} /> */}
         <Footer data={this.state.resumeData.main} />
       </div>
+        </div>
     );
   }
 }

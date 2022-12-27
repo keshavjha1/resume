@@ -1,6 +1,9 @@
-import React, { Component } from "react";
+import React, {Component, useEffect} from "react";
 import Fade from "react-reveal";
 import $ from "jquery";
+import "./Portfolio.css";
+import Group32 from "./shared/projecttile";
+import DocuCardGeneral from "./shared/generalDeck/DocuCardGeneral";
 
 
 let id = 0;
@@ -9,9 +12,15 @@ class Portfolio extends Component {
     console.log("s")
     super(props);
     this.state = {
-      blog: []
+      blog: [],
+        propsData:{
+          "DocuCardGeneral" :[]
+        },
+        loading: false
     };
   }
+
+
   componentDidMount(){
     $.ajax({
       url: "./blog.json",
@@ -26,7 +35,29 @@ class Portfolio extends Component {
         alert(err);
       }
     });
+
+      setTimeout(' ', 15000);
+
+fetch("/data/portfolio.json")
+        .then(response => response.json())
+        .then(data => {
+
+            console.log(data)
+            this.setState({ propsData: data })
+
+            this.setState({ loading: true })
+
+        })
+        .catch(err => {
+            console.log(err);
+
+
+
+        })
+
   }
+
+
   takeMetoPost= (id )=>{console.log('ss'+ id)}
  
   handleClick = () => {
@@ -34,8 +65,15 @@ class Portfolio extends Component {
   }
   
   render() {
-   
+
     if (!this.state.blog) return null;
+
+    const listItem= this.state.propsData.DocuCardGeneral.map((item) => {
+        return (  <DocuCardGeneral
+            className="docu-card-general-instance-1"
+            {...item}
+        /> )
+      });
    
    const projects = this.state.blog.map(function (articles) {
 //    let projectImage = "images/portfolio/" + projects.image;
@@ -69,6 +107,13 @@ class Portfolio extends Component {
             </div>
           </div>
         </Fade>
+          {!this.state.loading && <div>Loading</div> }
+
+        <div className="portfolio-container">
+
+            {listItem}
+
+        </div>
       </div>
     );
   }

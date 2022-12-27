@@ -4,10 +4,17 @@ import styles from './header.css'
 import style from './about.css'
 import ParticlesBg from "particles-bg";
 import {AppBar, Toolbar, IconButton, Typography, Button, Box} from "@mui/material";
+import { useHistory } from 'react-router-dom';
+import Navbar1 from "./navigation/mat-navbar";
 
 const Header =()=>{
+
+    const hiddeNavigation =() =>{
+        console.log("aa")
+    }
+
 return(
-    <div>
+    <div className="mainContainer">
 {/*        <AppBar position="static">
                <Toolbar>
                    <IconButton
@@ -25,7 +32,7 @@ return(
                </Toolbar>
            </AppBar>*/}
 
-
+     {/*   <Navbar1/>*/}
 
         <nav id="nav-wrap">
             <a className="mobile-btn" href="#nav-wrap" title="Show navigation">
@@ -37,29 +44,29 @@ return(
 
             <ul id="nav" className="nav">
                 <li >
-                    <Link  to="/home">
+                    <Link onClick={hiddeNavigation}  to="/home">
                         Home
                     </Link>
                 </li>
 
                 <li>
-                    <Link  to="/about">About </Link>
+                    <Link onClick={hiddeNavigation} to="/about">About </Link>
                 </li>
 
                 <li>
-                    <Link to="/resume">
+                    <Link onClick={hiddeNavigation} to="/resume">
                         Resume
                     </Link>
                 </li>
 
                 <li>
-                    <Link to="/portfolio">
+                    <Link onClick={hiddeNavigation}  to="/portfolio">
                         Works
                     </Link>
                 </li>
             </ul>
         </nav>
-        <div id="divMain">
+        <div className="divMain1">
         <Outlet/>
         </div>
     </div>

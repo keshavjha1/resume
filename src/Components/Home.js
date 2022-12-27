@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import ParticlesBg from "particles-bg";
 import Fade from "react-reveal";
 import { Link } from "react-router-dom";
+import Header1 from "../Components/frontpage/header1"
 
 class Home extends Component {
   render() {
@@ -13,7 +14,7 @@ class Home extends Component {
     const description = this.props.data.description;
 
     return (
-      <div id="home">
+     /* <div id="home">
 
         <div className="row banner">
           <div className="banner-text">
@@ -36,10 +37,11 @@ class Home extends Component {
               </ul>
             </Fade>
           </div>
-          
+
         </div>
 
-      </div>
+      </div>*/
+        <Header1/>
     );
   }
 }

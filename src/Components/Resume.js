@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Slide from "react-reveal";
+import styles from './resume.css'
 
 class Resume extends Component {
   getRandomColor() {
@@ -55,7 +56,7 @@ class Resume extends Component {
     });
 
     return (
-     <div className="divResume">
+     <div className="divResume1">
 
           <div className="row education">
             <div className="three columns header-col">

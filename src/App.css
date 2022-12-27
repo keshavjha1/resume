@@ -1,12 +1,6 @@
-#backgroud{
-    align-items: flex-start;
-    background-color: cornflowerblue;
+.background{
     display: flex;
-    flex-direction: column;
-    left: 0px;
-    margin: 0px;
-    overflow-x: hidden;
-    position: relative;
-    top: 0px;
-    width: 100%;
+    align-items: center;
+    justify-content: space-around;
 }
+

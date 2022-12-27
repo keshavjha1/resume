@@ -15,6 +15,8 @@ if (!this.props.data) return null;
       );
     });
 
+    const year= new Date().getFullYear();
+
     return (
       <footer>
         <div className = "footerDiv">
@@ -22,7 +24,7 @@ if (!this.props.data) return null;
               {<ul className="social-links">{networks}</ul> }
 
               <ul className="copyright">
-                <li>&copy; Copyright 2022 Keshav Jha</li>
+                <li>&copy; Copyright {year} Keshav Jha</li>
                 <li>
                   Design by Keshav Jha
                 

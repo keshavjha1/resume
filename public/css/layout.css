@@ -76,7 +76,7 @@ ul#nav li a {
    line-height: 32px;
 	text-decoration: none;
    text-align: left;
-   color: #fff;
+   color: deepskyblue;
 
 	-webkit-transition: color .2s ease-in-out;
 	-moz-transition: color .2s ease-in-out;
@@ -142,12 +142,7 @@ ul#nav li.current a { color: #fe6928; }
 /* d. Resume Section
 /* ------------------------------------------------------------------ */
 
-#resume {
-   background: #fff;
-   padding-top: 90px;
-   padding-bottom: 72px;
-   overflow: hidden;
-}
+
 
 #resume a, #resume a:visited  { color: #0762f9; }
 #resume a:hover, #resume a:focus { color: #313131; }
@@ -837,15 +832,6 @@ call-to-action .button {
 /* i. Footer
 /* ------------------------------------------------------------------ */
 
-footer {
-   padding-top: 48px;
-   margin-bottom: 48px;
-   color: #303030;
-   font-size: 14px;
-   text-align: center;
-   position: relative;
-}
-
 footer a, footer a:visited { color: #525252; }
 footer a:hover, footer a:focus { color: #fff; }
 
@@ -923,7 +909,7 @@ footer .social-links li:first-child { margin-left: 0; }
 }
 .social .btn{
    padding-left: 30px;
-   padding-right: 30px; 
+   padding-right: 30px;
 }
 .social .btn i{
    margin-right: 15px;

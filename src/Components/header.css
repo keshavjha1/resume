@@ -1,8 +1,19 @@
-#divMain{
+.divMain1{
     margin: 50px;
     display: flex;
     align-content: stretch;
     justify-content: space-evenly;
     align-items: baseline;
     flex-direction: column;
+    min-height: 80vh;
+    width: 90%;
+    max-width: 1200px;
+    overflow: scroll;
+    margin-top: 40px
+
 }
+
+.mainContainer{
+    width: inherit;
+}
+
